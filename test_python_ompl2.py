@@ -276,7 +276,7 @@ if __name__ == "__main__":
     env = suite.make(
         **options,
         has_renderer=True,
-        has_offscreen_renderer=False,
+        has_offscreen_renderer=True,
         ignore_done=True,
         use_camera_obs=False,
         control_freq=20,
@@ -291,7 +291,7 @@ if __name__ == "__main__":
     for i in range(10):
         action = np.random.uniform(low, high)
         obs, reward, done, _ = env.step(action)
-        #env.render()
+        env.render()
 
     # Solve the planning problem
     plan(args.runtime, args.planner, args.objective, args.file)
