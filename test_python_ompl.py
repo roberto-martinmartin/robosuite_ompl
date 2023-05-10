@@ -17,8 +17,8 @@ def plan():
  
     # set lower and upper bounds
     bounds = ob.RealVectorBounds(7)
-    bounds.setLow(-1)
-    bounds.setHigh(1)
+    bounds.setLow(-0.1)
+    bounds.setHigh(0.1)
     space.setBounds(bounds)
  
     # create a simple setup object
@@ -28,14 +28,10 @@ def plan():
     start = ob.State(space)
     # we can pick a random start state...
     start.random()
-    # ... or set specific values
-    start().setX(.5)
  
     goal = ob.State(space)
     # we can pick a random goal state...
     goal.random()
-    # ... or set specific values
-    goal().setX(-.5)
  
     ss.setStartAndGoalStates(start, goal)
  
