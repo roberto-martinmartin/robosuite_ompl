@@ -6,7 +6,7 @@
 import sys
 
 from robosuite.controllers import load_controller_config
-#from robosuite.utils.input_utils import *
+from robosuite.utils.input_utils import *
 
 try:
     from ompl import util as ou
